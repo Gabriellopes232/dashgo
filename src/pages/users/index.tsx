@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { Pagination } from "@/components/Pagination";
 import Sidebar from "@/components/Sidebar";
 import { Box, Button, Checkbox, Flex, Heading, Icon, Table, Tbody, Td, Text, Th, Thead, Tr } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
@@ -51,7 +52,7 @@ export default function UserList() {
                                         as="a"
                                         size="sm"
                                         fontSize="sm"
-                                        colorScheme="pink "
+                                        colorScheme="pink"
                                         leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>
                                         Editar
                                     </Button>
@@ -73,7 +74,7 @@ export default function UserList() {
                                         as="a"
                                         size="sm"
                                         fontSize="sm"
-                                        colorScheme="pink "
+                                        colorScheme="pink"
                                         leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>
                                         Editar
                                     </Button>
@@ -95,7 +96,7 @@ export default function UserList() {
                                         as="a"
                                         size="sm"
                                         fontSize="sm"
-                                        colorScheme="pink "
+                                        colorScheme="pink"
                                         leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>
                                         Editar
                                     </Button>
@@ -103,6 +104,7 @@ export default function UserList() {
                             </Tr>
                         </Tbody>
                     </Table>
+                    <Pagination />
                 </Box>
             </Flex>
         </Box>
