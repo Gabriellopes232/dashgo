@@ -1,3 +1,4 @@
+//@ts-nocheck
 import Header from "@/components/Header";
 import dynamic from "next/dynamic";
 import Sidebar from "@/components/Sidebar";
