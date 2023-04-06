@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 import { Input } from '@/components/Form/Input';
 import { Button, Flex, Stack } from '@chakra-ui/react';
 import { SubmitHandler, useForm } from 'react-hook-form';
@@ -17,7 +15,7 @@ const signInFormSchema = yup.object().shape({
 })
 
 export default function SignIn() {
-    const { register, handleSubmit, formState, errors } = useForm({
+    const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm({
         resolver: yupResolver(signInFormSchema)
     });
 
@@ -52,7 +50,7 @@ export default function SignIn() {
                     mt="6"
                     colorScheme="pink"
                     size="lg"
-                    isLoading={formState.isSubmitting}>
+                    isLoading={isSubmitting}>
                     Entrar
                 </Button>
             </Flex>
